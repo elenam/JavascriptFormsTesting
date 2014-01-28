@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Introduction to forms and events for UMM CSci 3601</title>
+    <script src="functions.js"></script>
+    <script>
+        function changeBackground(newColor) {
+            document.body.style.backgroundColor = newColor;
+        }
+
+        function displayTheElement() {
+            var toSet = "<p>" + document.forms.createAnElement.name.value+ ", this is your element!</p>";
+            if (document.getElementById("text").checked) {
+                toSet += createParagraph(document.forms.createAnElement.content.value);
+            } else if (document.getElementById("image").checked) {
+                toSet += createImage(document.forms.createAnElement.content.value);
+            } else {
+                toSet += createList(parseFloat(document.forms.createAnElement.content.value));
+            }
+
+            document.getElementById("changeMe").innerHTML = toSet;
+        }
+    </script>
+</head>
+<body id="body">
+<h1>Introduction to forms and events for UMM CSci 3601</h1>
+<!-- HTML elements can detect events, such as user clicking
+ in a given area, or moving their mouse over an element,
+ or a field in a table coming into focus.
+You can define event handlers, such as onClick or
+onMouseOver, that contain JavaScript (usually a function
+call) that is called when the event happens. This is used
+mostly with forms, but not only.-->
+
+
+<form>
+    <input type="button" value="Click here" onClick="changeBackground('red')" /><br />
+    <input type="button" value="Change it back" onMouseOver="changeBackground('white')" />
+</form>
+
+
+<form name="createAnElement">
+    <label for="name">Your name:</label>
+    <input type="text" name="name" id="name" value="Bob" maxlength="100"  /><br />
+    <label>What type element would you like to create?</label><br />
+    <input type="radio" name="element" id="text" value="text" checked="checked" /><label for="text">Text</label><br />
+    <input type="radio" name="element" id="image" value="image" /><label for="image">Image</label><br />
+    <input type="radio" name="element" id="list" value="list" /><label for="list">List</label><br />
+    <label for="content">What will be the value of this element? Enter text or url or the number of elements in the list.</label><br />
+    <input type="text" name="value" id="content" maxlength="300" /><br />
+    <input type="button" value="Done" onClick="displayTheElement()"/>
+</form>
+
+<div id="changeMe">
+    This is where new addition will appear.
+</div>
+
+</body>
+</html>
