@@ -24,3 +24,5 @@ function createList(n) {
     return theList;
 }
 
+module.exports = createParagraph;
+
