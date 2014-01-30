@@ -56,7 +56,7 @@
       <file leaf-file-name="JQueryExamples.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JQueryExamples.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="16" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.30232558" vertical-offset="341" max-vertical-offset="900">
+            <state line="24" column="54" selection-start="985" selection-end="985" vertical-scroll-proportion="0.33273703" vertical-offset="174" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
@@ -313,7 +313,11 @@
       <created>1391098106240</created>
       <updated>1391098106240</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed mouseenter to mouseover&#10;">
+      <created>1391098587253</created>
+      <updated>1391098587253</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -356,7 +360,8 @@
     <MESSAGE value="Added another mocha tests, figured out exports (sort of)&#10;" />
     <MESSAGE value="Added simple jQuery examples" />
     <MESSAGE value="Rollovers using jQuery (changing an attribute)&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rollovers using jQuery (changing an attribute)&#10;" />
+    <MESSAGE value="Changed mouseenter to mouseover&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed mouseenter to mouseover&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -484,7 +489,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JQueryExamples.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.30232558" vertical-offset="341" max-vertical-offset="900">
+        <state line="24" column="54" selection-start="985" selection-end="985" vertical-scroll-proportion="0.33273703" vertical-offset="174" max-vertical-offset="900">
           <folding />
         </state>
       </provider>

@@ -22,11 +22,11 @@
             });
 
             // a rollover using jQuery
+            // setting two events for the same element
             $("#image").mouseover(function(){
                 $("#image").attr("src","http://wcroc.cfans.umn.edu/prod/groups/cfans/@pub/@cfans/@wcroc/documents/asset/cfans_asset_184093.jpg");
-            });
-
-            $("#image").mouseout(function(){
+            })
+            .mouseout(function(){
                 $("#image").attr("src","http://www.morris.umn.edu/sustainability/images/slideshow/turbine.jpg");
             });
         });
