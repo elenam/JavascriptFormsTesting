@@ -16,8 +16,14 @@
                 $(body).css("background-color","red");
             });
 
+            // selecting the second button, i.e. button with index 1
             $(":button:eq(1)").mouseenter(function(){
                 $(body).css("background-color","white");
+            });
+
+            // a rollover using jQuery
+            $("#image").mouseenter(function(){
+                $("#image").attr("src","http://wcroc.cfans.umn.edu/prod/groups/cfans/@pub/@cfans/@wcroc/documents/asset/cfans_asset_184093.jpg");
             });
         });
     </script>
@@ -38,6 +44,8 @@ mostly with forms, but not only.-->
     <input type="button" value="Change it back" />
 </form>
 
+
+<img id="image" src="http://www.morris.umn.edu/sustainability/images/slideshow/turbine.jpg" width="400" />
 
 </body>
 </html>
