@@ -24,11 +24,30 @@
             // a rollover using jQuery
             // setting two events for the same element
             $("#image").mouseover(function(){
-                $("#image").attr("src","http://wcroc.cfans.umn.edu/prod/groups/cfans/@pub/@cfans/@wcroc/documents/asset/cfans_asset_184093.jpg");
+                $(this).attr("src","http://wcroc.cfans.umn.edu/prod/groups/cfans/@pub/@cfans/@wcroc/documents/asset/cfans_asset_184093.jpg");
             })
-            .mouseout(function(){
-                $("#image").attr("src","http://www.morris.umn.edu/sustainability/images/slideshow/turbine.jpg");
+                    .mouseout(function(){
+                        $(this).attr("src","http://www.morris.umn.edu/sustainability/images/slideshow/turbine.jpg");
+                    })
+                    .click(function() {
+                        $(this).slideUp();
+                    });
+            $("#create").click(function(){
+                if (count < 5) {
+                    $("#toBeCreated").append("<p>Here is another paragraph</p>");
+                }
+                count++;
             });
+
+            $("#createBefore").click(function(){
+                if (count < 5) {
+                    $("#toBeCreated").prepend("<p>Here is another paragraph</p>");
+                }
+                count++;
+            });
+
+            var count = 0;
+
         });
     </script>
 </head>
@@ -44,12 +63,18 @@ mostly with forms, but not only.-->
 
 
 <form>
-    <input type="button" id="button1" value="Change background" /><br />
-    <input type="button" value="Change it back" />
+    <input type="button" value="Change background" /><br />
+    <input type="button" value="Change it back" /><br />
+    <input type="button" id="create" value="Add elements" /><br />
+    <input type="button" id="createBefore" value="Add elements before" /><br />
 </form>
 
 
 <img id="image" src="http://www.morris.umn.edu/sustainability/images/slideshow/turbine.jpg" width="400" />
+
+<div id="toBeCreated">
+    <p>There will be more here</p>
+</div>
 
 </body>
 </html>
