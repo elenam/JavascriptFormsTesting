@@ -17,13 +17,17 @@
             });
 
             // selecting the second button, i.e. button with index 1
-            $(":button:eq(1)").mouseenter(function(){
+            $(":button:eq(1)").mouseover(function(){
                 $(body).css("background-color","white");
             });
 
             // a rollover using jQuery
-            $("#image").mouseenter(function(){
+            $("#image").mouseover(function(){
                 $("#image").attr("src","http://wcroc.cfans.umn.edu/prod/groups/cfans/@pub/@cfans/@wcroc/documents/asset/cfans_asset_184093.jpg");
+            });
+
+            $("#image").mouseout(function(){
+                $("#image").attr("src","http://www.morris.umn.edu/sustainability/images/slideshow/turbine.jpg");
             });
         });
     </script>
