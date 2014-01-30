@@ -7,10 +7,11 @@
     <script>
         function changeBackground(newColor) {
             document.body.style.backgroundColor = newColor;
+            //document.getElementById("button1").value = "Thank you";
         }
 
         function displayTheElement() {
-            var toSet = "<p>" + document.forms.createAnElement.name.value+ ", this is your element!</p>";
+            var toSet = "<p>" + document.forms.createAnElement.name.value + ", this is your element!</p>";
             if (document.getElementById("text").checked) {
                 toSet += createParagraph(document.forms.createAnElement.content.value);
             } else if (document.getElementById("image").checked) {
@@ -35,7 +36,7 @@ mostly with forms, but not only.-->
 
 
 <form>
-    <input type="button" value="Click here" onClick="changeBackground('red')" /><br />
+    <input type="button" id="button1" value="Click here" onClick="changeBackground('red')" /><br />
     <input type="button" value="Change it back" onMouseOver="changeBackground('white')" />
 </form>
 

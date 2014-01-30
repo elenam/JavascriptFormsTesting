@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Introduction to forms and events for UMM CSci 3601</title>
+    <!-- Adding jQuery to your page. You can also download it to your project -->
+    <!--See http://www.w3schools.com/jquery/jquery_install.asp for details -->
+    <script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("h1").click(function(){
+                $("h1").fadeOut("slow");
+            });
+
+            $(":button:first").click(function(){
+                $(body).css("background-color","red");
+            });
+
+            $(":button:eq(1)").mouseenter(function(){
+                $(body).css("background-color","white");
+            });
+        });
+    </script>
+</head>
+<body id="body">
+<h1>Introduction to forms and events for UMM CSci 3601</h1>
+<!-- HTML elements can detect events, such as user clicking
+ in a given area, or moving their mouse over an element,
+ or a field in a table coming into focus.
+You can define event handlers, such as onClick or
+onMouseOver, that contain JavaScript (usually a function
+call) that is called when the event happens. This is used
+mostly with forms, but not only.-->
+
+
+<form>
+    <input type="button" id="button1" value="Change background" /><br />
+    <input type="button" value="Change it back" />
+</form>
+
+
+</body>
+</html>
