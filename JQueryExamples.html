@@ -48,6 +48,10 @@
 
             var count = 0;
 
+            $("#theText").mouseover(function(){
+                $(this).val($("p:first").text().length);
+            })
+
         });
     </script>
 </head>
@@ -67,6 +71,7 @@ mostly with forms, but not only.-->
     <input type="button" value="Change it back" /><br />
     <input type="button" id="create" value="Add elements" /><br />
     <input type="button" id="createBefore" value="Add elements before" /><br />
+    <input type="text" id="theText" value="Say something" />
 </form>
 
 
